@@ -97,7 +97,9 @@ const EditProduct = () => {
             value={product.category}
             onChange={(e) => handleChange(e)}
             id="category"
+            defaultValue=""
           >
+            <option value="" defaultChecked>Select category</option>
             <option value="beauty">beauty</option>
             <option value="fragrances">fragrances</option>
           </select>

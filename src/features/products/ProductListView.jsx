@@ -50,13 +50,13 @@ const ProductListView = () => {
               
           {products.map((product) => {
             return (
-              <tr key={product.id} className="product">
+              <tr key={product.id} className="product" style={{cursor: "pointer"}} onClick={() => navigate(`/view_product/${product.id}`)}>
                 <td>
-                  <img style={{cursor: "pointer"}} onClick={() => navigate(`/view_product/${product.id}`)} src={product.images?.length > 0 ? product.images[0] : null} loading="lazy" alt="" />
+                  <img  src={product.images?.length > 0 ? product.images[0] : null} loading="lazy" alt="" />
                 </td>
 
                 <td>
-                  <h3 style={{cursor: "pointer"}} onClick={() => navigate(`/view_product/${product.id}`)}>{product.title}</h3>
+                  <h3>{product.title}</h3>
                 </td>
 
                 <td>
