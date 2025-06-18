@@ -7,12 +7,12 @@ const initialState = {
   error: null,
 };
 
-const BASE_URL = "http://localhost:3001/products";
-// const BASE_URL = "https://dummyjson.com/products";
+// const BASE_URL = "http://localhost:3001/products";
+const BASE_URL = "https://dummyjson.com/products";
 
 export const fetchProducts = createAsyncThunk("products/fetchProducts", async () => {
   const res = await axios.get(BASE_URL);
-  return res.data;
+  return res.data.products;
 });
 
 export const deleteProduct = createAsyncThunk("products/deleteProduct", async (id) => {
