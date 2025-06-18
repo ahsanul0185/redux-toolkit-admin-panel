@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+.layout {
+  display: flex;
+  position: relative;
+}
+
+.page {
+  flex-grow: 1;
+  padding: 40px;
+
+    max-width: 1200px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.loading {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.button {
+    padding: 7px 14px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(110, 110, 110);
+  cursor: pointer;
+  font-size: 11px;
+  margin-right: 4px;
+  color: white;
+}
+
+.button:hover {
+  background-color: rgb(71, 71, 71);
+
+}
+
+/* Nav Style */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  border-right: 1px solid lightgray;
+  padding-top: 120px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  right: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(80, 80, 80);
+  padding: 16px 30px;
+
+  border-top: 1px solid lightgray;
+}
+
+nav a:nth-last-child {
+  border-bottom: 1px solid lightgray;
+}
+
+nav a.active {
+  background-color: lightgray;
+}
+
+/* List Products Style */
+
+.products {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+  margin-top: 40px;
+}
+
+.products thead {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-bottom: 1px solid lightgray;
+}
+
+.products tr {
+  border-bottom: 1px solid lightgray;
+}
+
+.products tr:hover {
+  background: rgb(230, 230, 230);
+}
+
+.product img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+
+/* add new product form style */
+
+.add_product-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.add_product-form div {
+  display: flex;
+  flex-direction: column;
+}
+
+.add_product-form div input, 
+.add_product-form div textarea, 
+.add_product-form div select {
+  outline: none;
+  padding: 8px;
+  font-size: 15px;
+  border : 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.add_product-form div textarea {
+  min-height: 160px;
+  resize: none;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.submit_button {
+  text-align: end;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+}
+
+.submit_button button {
+  padding: 10px 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(233, 233, 233);
+  cursor: pointer;
+
+}
+
+.submit_button button:hover {
+  background-color: rgb(214, 214, 214);
+}
+
+.price_input {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+#price {
+  padding-left: 48px;
+}
+
+.price_input span {
+  position: absolute;
+  background-color: lightgray;
+  height: 100%;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+}
